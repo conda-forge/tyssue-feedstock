@@ -16,6 +16,9 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k or py35]
 requirements:
+  build:
+    - cmake
+    - {{ compiler('cxx') }}
   host:
     - python
     - setuptools
