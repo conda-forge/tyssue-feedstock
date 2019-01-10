@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.2.3" %}
-{% set sha256 = "0c3068ec257ce2018e24f26e4fc4b810a02fcf819857edbdb19e855547e4a203" %}
+{% set version = "0.3.0.rc1" %}
+{% set sha256 = "cc4fed073b3ed1a568184dca2ca064e6e01d88b5087199220230c3264aaf14a2" %}
 
 
 package:
@@ -19,6 +19,7 @@ requirements:
   host:
     - python
     - setuptools
+    - cgal
   run:
     - python
     - numpy
@@ -36,6 +37,7 @@ test:
     - tyssue.behaviors
     - tyssue.config
     - tyssue.core
+    - tyssue.collisions
     - tyssue.draw
     - tyssue.dynamics
     - tyssue.geometry
@@ -49,7 +51,7 @@ test:
 
 about:
   home: https://github.com/DamCB/tyssue
-  license: MPLv2.0
+  license: GPLv3.0
   license_file: LICENSE
   summary: 'A tissue simulation library'
   description: |
