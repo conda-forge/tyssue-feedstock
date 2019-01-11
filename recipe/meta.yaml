@@ -19,7 +19,7 @@ source:
     folder: pybind11
     sha256: {{ pb11_sha256 }}
   - url: https://github.com/CGAL/cgal/archive/releases/CGAL-{{ cgal_version }}.tar.gz
-    folder: cgal
+    folder: CGAL
     sha256: {{ cgal_sha256 }}
 
 
