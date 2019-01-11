@@ -18,6 +18,7 @@ build:
   skip: True  # [py2k or py35 or py37]
 requirements:
   build:
+    - setuptools
     - cmake
     - eigen
     - {{ compiler('c') }}
