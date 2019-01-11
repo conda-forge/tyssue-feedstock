@@ -1,6 +1,7 @@
 {% set name = "tyssue" %}
 {% set version = "0.3.rc1" %}
 {% set sha256 = "cc4fed073b3ed1a568184dca2ca064e6e01d88b5087199220230c3264aaf14a2" %}
+{% set cgal_version = "4.13" %}
 
 
 package:
@@ -14,15 +15,19 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [py2k or py35]
+  skip: True  # [py2k or py35 or py37]
 requirements:
   build:
     - cmake
+    - eigen
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - boost-cpp
+    - mpfr
+    - cgal
   host:
     - python
     - setuptools
-    - cgal
   run:
     - python
     - numpy
