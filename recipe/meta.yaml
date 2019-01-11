@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.3.rc1" %}
-{% set sha256 = "cc4fed073b3ed1a568184dca2ca064e6e01d88b5087199220230c3264aaf14a2" %}
+{% set version = "0.3.rc2" %}
+{% set sha256 = "8d9bb2fb0b818bd5cee368952d90d8d894e2da0722d878b4fbf74243ee161fca" %}
 {% set cgal_version = "4.13" %}
 
 
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - setuptools
+    - pybind11
     - cmake
     - eigen
     - {{ compiler('c') }}
