@@ -2,7 +2,9 @@
 {% set version = "0.3.rc4" %}
 {% set sha256 = "58043df3d10818c23ae35f7a1288f48474ec99248a09683c06aa9a7920f57ce8" %}
 {% set cgal_version = "4.13" %}
-{% set pb11_version="2.2.4" %}
+{% set cgal_sha256 = "27659bb7a22a235b7c9c2266096eea4bdb221f9fb356bfbbea1ad953cbd5023a" %}
+{% set pb11_version = "2.2.4" %}
+{% set pb11_sha256 = "b69e83658513215b8d1443544d0549b7d231b9f201f6fc787a2b2218b408181e" %}
 
 package:
   name: {{ name|lower }}
@@ -15,8 +17,10 @@ source:
   - fn: pybind11-{{ pb11_version }}.tar.gz
     url: https://github.com/pybind/pybind11/archive/v{{ pb11_version }}.tar.gz
     folder: pybind11
+    sha256: {{ pb11_sha256 }}
   - url: https://github.com/CGAL/cgal/archive/releases/CGAL-{{ cgal_version }}.tar.gz
     folder: cgal
+    sha256: {{ cgal_sha256 }}
 
 
 build:
