@@ -2,16 +2,23 @@
 {% set version = "0.3.rc4" %}
 {% set sha256 = "58043df3d10818c23ae35f7a1288f48474ec99248a09683c06aa9a7920f57ce8" %}
 {% set cgal_version = "4.13" %}
-
+{% set pb11_version="2.2.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  - fn: {{ name }}-{{ version }}.tar.gz
+    url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
+    sha256: {{ sha256 }}
+  - fn: pybind11-{{ pb11_version }}.tar.gz
+    url: https://github.com/pybind/pybind11/archive/v{{ pb11_version }}.tar.gz
+    folder: pybind11
+  - url: https://github.com/CGAL/cgal/archive/releases/CGAL-{{ cgal_version }}.tar.gz
+    folder: cgal
+
+
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -19,17 +26,14 @@ build:
 requirements:
   build:
     - setuptools
-    - pybind11
     - cmake
     - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - boost-cpp
     - mpfr
-    - cgal
   host:
     - python
-    - pybind11
     - setuptools
   run:
     - python
