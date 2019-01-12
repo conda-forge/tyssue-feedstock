@@ -28,8 +28,6 @@ build:
   skip: True  # [py2k or py35]
 requirements:
   build:
-    - setuptools
-    - pip
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
@@ -39,6 +37,7 @@ requirements:
   host:
     - python
     - setuptools
+    - pip
   run:
     - python
     - numpy
