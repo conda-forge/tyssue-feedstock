@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd CGAL
 mkdir build && cd build
 
 # needs qt5 for imageio
