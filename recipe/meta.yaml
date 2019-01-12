@@ -25,15 +25,14 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
   skip: True  # [py2k or py35]
 requirements:
   build:
     - setuptools
-    - cmake
-    - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - cmake
+    - eigen
     - boost-cpp
     - mpfr
   host:
