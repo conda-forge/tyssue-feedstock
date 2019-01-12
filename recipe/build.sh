@@ -15,4 +15,4 @@ make install -j${CPU_COUNT}
 
 cd ../..
 
-python setup.py install --single-version-externally-managed --record record.txt
+$PYTHON -m pip install . -vv

@@ -17,4 +17,4 @@ if errorlevel 1 exit 1
 
 cd ..\..
 
-python setup.py install --single-version-externally-managed --record record.txt
+"%PYTHON%" -m pip install . -vv

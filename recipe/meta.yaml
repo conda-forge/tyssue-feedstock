@@ -29,6 +29,7 @@ build:
 requirements:
   build:
     - setuptools
+    - pip
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
