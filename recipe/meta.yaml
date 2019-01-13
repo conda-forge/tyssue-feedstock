@@ -28,20 +28,20 @@ build:
   skip: True  # [py2k or py35]
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
     - cmake
     - eigen
-    - boost-cpp
-    - mpfr
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - setuptools
     - pip
-  run:
     - boost-cpp
     - mpfr
+  run:
     - python
+    - boost-cpp
+    - mpfr
     - numpy
     - scipy
     - matplotlib
