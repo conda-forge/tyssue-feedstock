@@ -32,16 +32,16 @@ requirements:
     - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - boost-cpp 1.68
+    - mpfr
   host:
     - python
     - setuptools
     - pip
-    - boost-cpp
-    - mpfr
   run:
-    - python
-    - boost-cpp
+    - boost-cpp 1.68
     - mpfr
+    - python
     - numpy
     - scipy
     - matplotlib
