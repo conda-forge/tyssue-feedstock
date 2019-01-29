@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
 {% set version = "0.3.1" %}
-{% set sha256 = "c4912a00e99f29ee37cac1d780d115a048743370b9329a2cca839ffb392f3516" %}
+{% set sha256 = "4b1439faf8d35d7ec655bfa4daaa2ae14cbfcdccd92e57b0103907f3b67c2b6b" %}
 {% set cgal_version = "4.13" %}
 {% set cgal_sha256 = "c4912a00e99f29ee37cac1d780d115a048743370b9329a2cca839ffb392f3516" %}
 {% set pb11_version = "2.2.4" %}
