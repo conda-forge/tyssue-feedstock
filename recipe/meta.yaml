@@ -14,7 +14,7 @@ build:
   number: 2
   script:
     - set "CMAKE_GENERATOR=NMake Makefiles"  # [win]
-    - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option=\"--exclude-arch\""
+    - "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: true  # [py2k or py35]
   skip: true  # [win and vc<14]
 
