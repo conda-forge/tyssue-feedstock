@@ -12,8 +12,11 @@ source:
     sha256: {{ sha256 }}
 build:
   number: 2
+  script:
+    - set "CMAKE_GENERATOR=NMake Makefiles"  # [win]
+    - "{{ PYTHON }} -m pip install . --no-deps -vv --install-option=\"--exclude-arch\""
   skip: true  # [py2k or py35]
-  skip: true # [win and vc<14]
+  skip: true # [win and vc<14
 
 requirements:
   build:
