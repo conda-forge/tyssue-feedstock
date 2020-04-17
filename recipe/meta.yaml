@@ -19,7 +19,7 @@ source:
     sha256: bd9327be903ab7ee379a8a7a0609eba0962f5078d2497cf8e13e8e1598584154
 
 build:
-  number: 3
+  number: 4
   skip: true  # [py2k or py35]
   skip: true  # [win and vc<14]
 
@@ -31,7 +31,7 @@ requirements:
     - {{ compiler('cxx') }}
     - boost-cpp
     - mpfr
-    - jom # [win]
+    - jom  # [win]
   host:
     - python
     - setuptools
