@@ -36,9 +36,6 @@ requirements:
     - setuptools
     - pip
   run:
-    - boost-cpp
-    - mpfr
-    - cgal
     - python
     - numpy
     - scipy
