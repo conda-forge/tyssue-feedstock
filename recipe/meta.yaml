@@ -24,10 +24,8 @@ build:
 requirements:
   build:
     - cmake
-    - eigen
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - boost-cpp
     - mpfr
     - cgal
     - jom  # [win]
