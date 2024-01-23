@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "b737edd68b507eb1a59b9b2c794118cf249b2f20f63b892c876b9c9db64756ba" %}
+{% set version = "1.0.pre" %}
+{% set sha256 = "402e5deb696e4574f77e219b9625a3ae6e277aca25a8c21596be21f759773de5" %}
 
 package:
   name: {{ name|lower }}
@@ -10,15 +10,9 @@ source:
   - fn: {{ name }}-{{ version }}.tar.gz
     url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
     sha256: {{ sha256 }}
-  - fn: pybind11-2.6.1.tar.gz
-    url: https://github.com/pybind/pybind11/archive/v2.6.1.tar.gz
-    folder: pybind11
-    sha256: cdbe326d357f18b83d10322ba202d69f11b2f49e2d87ade0dc2be0c5c34f8e2a
 
 build:
   number: 1
-  skip: true  # [py2k or py35]
-  skip: true  # [win and vc<14]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
