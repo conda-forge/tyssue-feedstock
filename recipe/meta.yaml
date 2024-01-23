@@ -8,7 +8,7 @@ package:
 
 source:
   - fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/DamCB/tyssue/archive/{{ version }}.tar.gz
+    url: https://github.com/glyg/tyssue/archive/{{ version }}.tar.gz
     sha256: {{ sha256 }}
 
 build:
