@@ -23,6 +23,9 @@ requirements:
     - mpfr
     - cgal
     - jom  # [win]
+    - scikit-build-core
+    - setuptools-scm
+
   host:
     - python
     - setuptools
