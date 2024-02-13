@@ -29,6 +29,9 @@ requirements:
     - mpfr
     - cgal
     - jom  # [win]
+    - scikit-build-core
+    - setuptools-scm
+
   host:
     - python
     - setuptools
@@ -70,7 +73,7 @@ about:
   summary: A tissue simulation library
   description: |
     tyssue provides data structures and algorithms to model epithelium
-    in 2D and 3D for python 3.6+
+    in 2D and 3D for python 3.10+
   doc_url: http://tyssue.readthedocs.io
   dev_url: https://github.com/DamCB/tyssue
 extra:
