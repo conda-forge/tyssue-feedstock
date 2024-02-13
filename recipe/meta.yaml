@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "1.0.pre" %}
-{% set sha256 = "402e5deb696e4574f77e219b9625a3ae6e277aca25a8c21596be21f759773de5" %}
+{% set version = "1.0" %}
+{% set sha256 = "743cd82bd71b8df88660ca4a23523b419a19e5c3afa8f2cb1e37067e0b3661fa" %}
 
 package:
   name: {{ name|lower }}
