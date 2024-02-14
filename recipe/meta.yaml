@@ -13,7 +13,7 @@ source:
 
 build:
   number: 2
-  skip: true  # [py > 20 or py = 35]
+  skip: true  # [py<=39]
   skip: true  # [win and vc<14]
   script: {{ PYTHON }} -m pip install .[dev] -vv
 
@@ -32,6 +32,14 @@ requirements:
     - python
     - setuptools
     - pip
+    - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - mpfr
+    - cgal
+    - jom  # [win]
+    - setuptools-scm
+    - scikit-build-core
   run:
     - python
     - numpy
