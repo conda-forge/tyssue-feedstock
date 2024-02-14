@@ -1,6 +1,6 @@
 {% set name = "tyssue" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "b737edd68b507eb1a59b9b2c794118cf249b2f20f63b892c876b9c9db64756ba" %}
+{% set version = "1.0.2" %}
+{% set sha256 = "e6f03df54ecbbd40aeb52d08fe9a3e3452a34696902d8a23e8623b896ca3b8c8" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
     sha256: cdbe326d357f18b83d10322ba202d69f11b2f49e2d87ade0dc2be0c5c34f8e2a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or py35]
   skip: true  # [win and vc<14]
   script: {{ PYTHON }} -m pip install . -vv
