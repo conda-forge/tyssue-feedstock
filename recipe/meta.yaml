@@ -25,10 +25,19 @@ requirements:
     - mpfr
     - cgal
     - jom  # [win]
+    - scikit-build-core
+    - setuptools-scm
   host:
+    - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - mpfr
+    - cgal
     - python
     - setuptools
     - pip
+    - scikit-build-core
+    - setuptools-scm
   run:
     - python
     - numpy
@@ -41,6 +50,12 @@ requirements:
     - quantities
     - ipyvolume
     - vispy
+    - meshio
+    - zarr
+    - xarray
+    - scikit-build-core
+    - setuptools-scm
+
 test:
   imports:
     - tyssue
